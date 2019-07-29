@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asliceofnutritionpie.data_display_page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="177dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+            <!--calories text-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/caloriesTextRow">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_span="4"
+                    android:gravity="center"
+                    android:text="Calories"
+                    android:textSize="30sp"
+                    android:id="@+id/caloriesText"/>
+
+            </TableRow>
+            <!--calories chart-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/caloriesChartRow">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_span="4"
+                    android:id="@+id/caloriesChart">
+                </com.github.mikephil.charting.charts.PieChart>
+
+            </TableRow>
+            <!--carbs + protein text-->
+            <TableRow
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:id="@+id/carbsProteinTextRow">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:text="Carbs"
+                    android:textSize="18sp"
+                    android:id="@+id/carbsText"/>
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:text="Protein"
+                    android:textSize="18sp"
+                    android:id="@+id/proteinText"/>
+            </TableRow>
+            <!--carbs + protein charts-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/carbsProteinChartRow">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_height="100dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_span="2"
+                    android:id="@+id/carbsChart"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_height="100dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_span="2"
+                    android:id="@+id/proteinChart"/>
+            </TableRow>
+            <!--sugar + fat text-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sugarFatsTextRow">
+
+                <TextView
+                    android:id="@+id/sugarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:text="Sugar"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fatsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:text="Fats"
+                    android:textSize="18sp" />
+            </TableRow>
+            <!--sugar + fat charts-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sugarFatsChartRow">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_height="100dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_span="2"
+                    android:id="@+id/sugarChart"/>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_height="100dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_span="2"
+                    android:id="@+id/fatsChart"/>
+            </TableRow>
+            <!--supplement 1 Row text-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/supplement1TextRow">
+
+                <TextView
+                    android:id="@+id/ironText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Iron"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/vitaminAText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vitamin A"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/vitaminBText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vitamin B"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/vitaminCText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vitamin C"
+                    android:gravity="center"/>
+            </TableRow>
+            <!--supplements 1 row charts-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/supplement1ChartsRow">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/ironChart"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/vitaminAChart"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/vitaminBChart"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/vitaminCChart"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginBottom="10dp" />
+            </TableRow>
+            <!--supplements 2 row text-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/supplement2TextRow">
+
+                <TextView
+                    android:id="@+id/nutrient1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrient 1"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/nutrient2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrient 2"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/nutrient3Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrient 3"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/nutrient4Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrient 4"
+                    android:gravity="center"/>
+            </TableRow>
+            <!--supplements 2 row charts-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/supplement2ChartsRow">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/nutrient1Chart"/>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/nutrient2Chart"/>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/nutrient3Chart"/>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/nutrient4Chart"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

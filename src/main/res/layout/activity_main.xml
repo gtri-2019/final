@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context="com.example.asliceofnutritionpie.MainActivity">
+
+    <!--water cups-->
+
+    <ToggleButton
+        android:id="@+id/water1Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:onClick="water1Click"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/water2Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="44dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:enabled="false"
+        android:onClick="water2Click"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/water1Button"
+        app:layout_constraintStart_toEndOf="@+id/water1Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/water3Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="76dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:enabled="false"
+        android:onClick="water3Click"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/water1Button"
+        app:layout_constraintStart_toEndOf="@+id/water2Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/water4Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="108dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:enabled="false"
+        android:onClick="water4Click"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/water3Button"
+        app:layout_constraintStart_toEndOf="@+id/water3Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/water5Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="140dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:enabled="false"
+        android:onClick="water5Click"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/water4Button"
+        app:layout_constraintStart_toEndOf="@+id/water4Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/water6Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="172dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:enabled="false"
+        android:onClick="water6Click"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/water5Button"
+        app:layout_constraintStart_toEndOf="@+id/water5Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/water7Button"
+        android:layout_width="32dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="204dp"
+        android:background="@null"
+        android:button="@drawable/water_cup_toggle"
+        android:enabled="false"
+        android:text="@string/empty"
+        android:textColor="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/water6Button"
+        app:layout_constraintStart_toEndOf="@+id/water6Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--blue bar at top with buttons and calories left    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="46dp"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:contentDescription="@string/profile_image"
+            android:onClick="goToProfilePage"
+            app:srcCompat="@drawable/whiteprofileiconresize" />
+
+        <Button
+            android:id="@+id/caloriesLeftTextButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24sp"
+            android:background="@color/colorPrimary"
+            android:onClick="goToDataPage"/>
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@string/settings_image"
+            android:onClick="goToSettingsPage"
+            app:srcCompat="@drawable/settingsiconmk2resize2" />
+    </LinearLayout>
+    <!--add meal buttons- consolidate into one with popup?-->
+    <Button
+        android:id="@+id/addMealButton"
+        android:layout_width="133dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginRight="138dp"
+        android:background="@drawable/roundedbutton"
+        android:onClick="chooseMealDialog"
+        android:text="@string/add_meal"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

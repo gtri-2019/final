@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sexSpinnerItems">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="activitySpinnerItems">
+        <item>Sedentary</item>
+        <item>Light</item>
+        <item>Moderate</item>
+        <item>Athletic</item>
+    </string-array>
+</resources>
